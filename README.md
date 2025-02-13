@@ -1,4 +1,4 @@
-Repo containing latex code for BSc Thesis "Unsupervised Deep Learning for Semantic Segmentation of Scientific 3D Images".
+Repo containing Latex code for BSc thesis "Unsupervised Deep Learning for Semantic Segmentation of Scientific 3D Images".
 
 ### Abstract 
 
