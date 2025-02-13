@@ -1,0 +1,313 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[UKenglish]{babel}   % for hyphenation etc.
+\usepackage[babel]{microtype}          % for better paragraph look (reduces overfull boxes etc)
+  \tolerance=5000             % maybe needed to hinder writing on margin (allows "worse" paragraphs)
+\usepackage[utf8]{inputenc}     % so ä,ö, etc. work
+\usepackage[T1]{fontenc}        % correct font encoding
+\usepackage{DejaVuSerif}        % font (install texlive-fonts-extra) other fonts: cochineal; % also sudo apt install cm-super!
+%\usepackage{mathptmx}          % change font: times new roman with math support
+%\usepackage{pmboxdraw}          % so boxdrawing chars can be displayed (needed for code inclusion)
+%\usepackage{textgreek}          % to have greek letters in text
+\usepackage{amsmath}
+\usepackage{textcomp}           % for additional signs in T1 fonts
+%\usepackage[cal=esstix]{mathalpha}  % for specific calligraphy math font (to better match image from elsewhere). try also esstix, boondoxupr, rsfso
+\usepackage{csquotes}           % use so quotes are set in right typeset too
+\usepackage[all]{nowidow}        % use package to hinder orphaned sentences at begin/end of page
+\usepackage{graphicx}           % to include graphics
+\usepackage{float}              % to include float graphics
+\usepackage[section]{placeins}  % to contain floats in sections
+\usepackage{afterpage}          % to better place figures
+\usepackage{subcaption}
+\usepackage[table]{xcolor}              % for naming colours (later on), also makes \cellcolor available in table
+%tikz picture
+\usepackage{tikz}
+\usepackage{rotating}
+%\usepackage{tikz-uml}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning, fit}
+  \usepackage{xspace}              %make space after self defined vars optional (except when , or .)
+  \usepackage[hang,flushmargin, bottom]{footmisc}   % no indent in footnotes
+  \addtolength{\skip\footins}{-10pt}          % decrease distance to footnotes
+\usepackage{perpage}             % to be able to reset footnote numbers per page
+\MakePerPage{footnote}       % reset foonote numbers perpage page
+\usepackage{titling}            % so \thetitle etc. can be used later
+\usepackage[hyphens]{url}       % \usepackage{xurl} for break at any point
+\usepackage{hyphenat}           % allow hyphenation at underscores!
+  \urlstyle{same}
+\usepackage[numbib]{tocbibind}  % to include lists in content
+\usepackage{tocloft}            % to make toc and lof/loft pretty
+  % add tablename to LoT and adjust indent
+  \renewcommand{\cfttabpresnum}{\tablename~}
+  \addtolength{\cfttabnumwidth}{50pt}
+  % add figurename to LoF and adjust indent
+  \renewcommand{\cftfigpresnum}{\figurename~}
+  \addtolength{\cftfignumwidth}{50pt}
+  \setlength\cftparskip{-2pt}  %smaller skips after sections in toc, adjust listings too
+  %no equivalent for listings -> has to be done later with listings package
+  %make space between dots smaller
+  \renewcommand\cftdotsep{1} % need to adjust listings line too!
+
+\usepackage{setspace}           % for changing line space (e.g. in titlepage)
+\usepackage{enumitem}           % reduce spacing in lists (needs to be adjusted according to used spacing)
+  \setlist{topsep=-2ex, parsep=0pt}
+  % reduce spacing around equations
+  \setlength{\abovedisplayskip}{5pt}
+  \setlength{\belowdisplayskip}{5pt}
+  %re-adjust space after pictures?
+  %\setlength{\intextsep}{15pt} % Vertical space above & below [h] floats
+  %\setlength{\textfloatsep}{15pt} % Vertical space below (above) [t] ([b]) floats
+  \setlength{\textfloatsep}{20pt}  % vertical spacing between figures
+
+\usepackage[font=singlespacing, labelfont={bf,it}, textfont=it]{caption}
+% captionskips not working with \restylefloat{figure}, but with \restylefloat*{figure}. However \parskip after in-text float cannot be changed!
+% setup bib (use biblatex when using a biblatex-reference file! - biblatex needs biber installed on system
+\usepackage[style=alphabetic, url=false, eprint=false, date=year, backend=biber]{biblatex} %other styles: authoryear, ieee, debug(for key printing)
+  % make all bibliography acronyms (url, isbn, doi etc, upper case
+  % (bibacro is called on all of these, and tries to make it lowercase when possible)
+  \renewcommand*{\mkbibacro}[1]{\MakeUppercase{#1}}
+  % get rid of pages field (I dont want it in my bibliography)
+  \AtEveryBibitem{\clearfield{pages}}
+  % fix the breaking space in the \textcite command!
+  \renewcommand\namelabeldelim{\addnbspace}
+  \setcounter{biburlnumpenalty}{7000} % in bib: allow url breaking after numbers
+  %\setcounter{biburllcpenalty}{7000} % in bib: allow url breaking after lower case letter
+  %\setcounter{biburlucpenalty}{8000} % in bib: allow url breaking after upper case letter
+
+\usepackage[nomain,acronym,toc,nonumberlist,nogroupskip]{glossaries}    % for list of abbrevations
+    \makenoidxglossaries
+    % for some reason glossaries does extra spacing after title, remove it.
+    %\setglossarypreamble[acronym]{\vspace*{-0.75\baselineskip}}
+    \setglossarystyle{long}    % set glossary to table style (or alttree with %\glssetwidest{long-placeholder-word}
+    \setlength{\glsdescwidth}{0.8\textwidth}   % make it more narrow, so it matches figures and tables
+    \renewcommand*{\glsnamefont}[1]{\bfseries #1} %make names bold 
+    \addto{\captionsUKenglish}{     %change title of acronyms
+        \renewcommand{\acronymname}{List of Acronyms}
+    }
+
+
+
+\usepackage{longtable}     % allow tables to span multiple pages with longtable environment
+\usepackage{tabularx}      % pretty columns
+\usepackage{makecell}      % for specific line breaks in cells
+\usepackage{multirow}
+  \setcellgapes{5pt}   % set cell gaps in gaped makecell
+
+%setup code snippets
+\usepackage{listings}
+% since tocloft does not provide options, it has to be crafted manually. Far from ideal, but works at least a bit
+\makeatletter
+    \renewcommand{\@dotsep}{1}  % change dot distance in listings
+    \renewcommand*{\lstlistlistingname}{List of Code}
+    \renewcommand*{\lstlistingname}{Code}
+    %add name of Codes (and color) before each listing; adjust spacing between number and text to same spacings as Figures and Tables (2.5em)
+    \renewcommand{\l@lstlisting}[2]{%
+        \@dottedtocline{1}{20pt}{2.5em}{\textcolor{linkcolor}{\lstlistingname\ }#1}{#2}
+    }
+\makeatother
+% needed later to adjust spacing around listings title
+\usepackage{titlesec}
+    
+    \definecolor{codegreen}{rgb}{0,0.6,0}
+    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=t,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    literate=
+        {├}{\textSFviii}{1}%
+        {└}{\textSFii}1%
+        {│}{\textSFxi}1%
+        {─}{\textSFx}1%
+        {µ}{\textmu}1%
+}
+\lstdefinestyle{inlinestyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\large,
+    breakatwhitespace=true,   %if true, ONLY linebreak at whitespace, so there will be no linebreak at end (and comma in next line)
+    breaklines=true,
+}
+\lstset{style=inlinestyle} %set default, so \lstinline does not need style argument. can be used anywhere in document to change style
+%or name an environment, code must be put directly inside
+\lstnewenvironment{python}[2]
+{\lstset{language=Python,style=mystyle,caption={#1},label={#2}}}
+{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Document-specific properties (used in pdf, titlepage + references)
+\title{Unsupervised Deep Learning for Semantic Segmentation of Scientific 3D~Images}
+\author{Jennifer Ahrens}
+\addbibresource{./MachineLearning_library.bib}
+
+
+%% $\lambda_{knn}$ \\%define glossary terms here: % use with \gls{<first arg>}
+\newacronym{unisef}{UniSeF}{Universal Segmentation Framework}
+\newacronym{ct}{CT}{Computed Tomography}
+\newacronym{mct}{~\hspace{-5pt}\textmu{}CT}{Micro-Computed Tomography}
+\newacronym{srmct}{SR\textmu{}CT}{Synchrotron Radiation Micro-Computed Tomography}
+\newacronym{dsc}{DSC}{Dice Similarity Coefficient}
+\newacronym{nsd}{NSD}{Normalised Surface Distance}
+\newacronym{mrt}{MRT}{Magnetic Resonance Tomography}
+\newacronym{desy}{DESY}{Deutsches Elektronen-Synchrotron}
+\newacronym{beegfs}{BeeGFS}{parallel file system optimised for high performance computing}
+\newacronym{slurm}{SLURM}{Simple Linux Utility for Resource Management}
+\newacronym{stego}{STEGO}{Self-supervised Transformer with Energy-based Graph Optimization}
+\newacronym{nnu}{nnU-Net}{no new U-Net}
+\newacronym{relu}{ReLu}{Rectified Linear unit}
+\newacronym{dino}{DINO}{self-\textbf{di}stillation with \textbf{no} labels}
+\newacronym{iou}{IoU}{Intersection over Union}
+\newacronym{miou}{mIoU}{mean Intersection over Union}
+\newacronym{loo}{LOO}{leave-one-out}
+\newacronym{picie}{PiCIE}{\textbf{Pi}xel-level feature \textbf{C}lustering using \textbf{I}nvariance and \textbf{E}quivariance}
+
+%add hypenation for words
+\hyphenation{Su-per-vised Learn-ing}
+\hyphenation{Semi-Super-vised}
+\hyphenation{Con-fi-gu-ra-tion}
+\hyphenation{re-so-lu-tion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define commands for recurring things (filenames, variables etc), to be formatted togehter
+% misc
+
+% proper Nouns / Names / Brands...
+\newcommand{\tensorboard}       {TensorBoard}
+
+% define and format data set names
+\newcommand{\formatData}[1]      {\textsf{\large{#1}}\xspace}
+\newcommand{\mindataset}       {\formatData{minimal screws dataset}}
+\newcommand{\fulldataset}           {\formatData{full screws dataset}}
+
+% define and formatfile and folder names
+\newcommand{\formatFile}      [1]{\emph{#1}\xspace}
+%my filenames
+
+% define and format variables
+\newcommand{\formatCode}      [1]{\texttt{#1}\xspace}
+\newcommand{\neginter}           {\formatCode{neg\_inter}}
+\newcommand{\posinter}           {\formatCode{pos\_inter}}
+\newcommand{\posintra}           {\formatCode{pos\_intra}}
+
+% define and formatting special content
+\newcommand{\formatLabel}[1]           {\textit{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% to be removed in end:
+\setlength{\marginparwidth}{2cm} % so todos can be displayed in margin
+\usepackage[tickmarkheight=0.2cm]{todonotes}
+\newcommand{\source}{\todo[color=cyan]{source}}
+\usepackage[normalem]{ulem}      % for crossing out text  
+
+
+%%% FH-Wedel Layout for Bsc-Thesis:
+% box around figures and tables (package float)
+%\floatstyle{boxed}
+%    \restylefloat*{figure}   % change style for float types, arbitrary w/o type
+%    \restylefloat*{table}
+\onehalfspacing              %set line space (setspace package)
+\usepackage[skip=\baselineskip, indent=0pt]{parskip} % space between paragraphs
+
+\renewcommand\footnoterule{\rule{5cm}{0.1pt}} % setup footnote
+\setlength{\footnotesep}{1pc}
+
+
+
+%%% to be loaded last
+\usepackage{hyperref}        % load hyperref last
+% TODO change link-color here before printing
+\definecolor{linkcolor}{rgb}{0,0,0.5} %{0,0,.5} % darkblue
+\hypersetup
+{ colorlinks=true
+, breaklinks=true
+, linkcolor=linkcolor
+, menucolor=linkcolor
+, urlcolor=linkcolor
+, citecolor=linkcolor
+, pdftitle={\thetitle -- \theauthor}
+, pdfsubject={\thetitle}
+, pdfauthor=\theauthor
+, bookmarksnumbered=true
+, bookmarksopen=true
+, bookmarksopenlevel=3
+}
+\usepackage[a4paper,  % load geometry after hyperref
+% FH-Wedel format:
+%inner=3.5cm,outer=3.0cm,
+%top=3cm,bottom=3cm,
+%footskip=1.0cm,
+%nicer format:
+    inner=3.5cm,outer=3.0cm,
+    top=2.5cm,bottom=2.5cm,
+    footskip=1.2cm,
+    twoside]{geometry}
+\usepackage{booktabs}
+
+% after loading hyperref, redefine the displaynames names for autoref of subsetions
+\addto\extrasUKenglish{ 	\renewcommand{\sectionautorefname}{Section} 	\let\subsectionautorefname\sectionautorefname 	\let\subsubsectionautorefname\sectionautorefname }
+
+
+\begin{document}
+    %\todo{remove list of todos and todo-package}
+%\listoftodos
+
+\input{titlepage}
+\cleardoublepage
+
+\pagenumbering{Roman}
+\pagestyle{empty}
+\input{chapters/0_abstract}
+\cleardoublepage
+
+\pagestyle{plain}
+\tableofcontents
+\newpage %TODO manual adjustment, check
+\listoffigures
+\newpage %TODO manual adjustment, check
+\listoftables
+%\addcontentsline{toc}{section}{\lstlistlistingname}
+%change spacing around title for list of code
+%\titlespacing*{\section} {0pt}{2.5ex}{4.5ex}
+%\lstlistoflistings      %list of code-snippets
+%\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex} % reset to default
+\printnoidxglossaries   % must be used with noidx, else nothing is displayed
+
+% because my glossary style is a table, counter needs to be resetted
+\setcounter{table}{0}
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+\input{chapters/1_introduction}
+\input{chapters/2_segmentation}
+\input{chapters/3_deeplearning}
+\input{chapters/4_stego.tex}
+\input{chapters/5_adaption.tex}
+\input{chapters/6_evaluation.tex}
+\input{chapters/7_conclusion.tex}
+\input{chapters/8_literature.tex}
+\clearpage
+\pagenumbering{roman}
+\input{chapters/9_appendix.tex}
+\input{chapters/10_declaration.tex}
+
+\end{document}
+

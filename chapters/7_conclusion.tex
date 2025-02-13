@@ -1,0 +1,26 @@
+\section{Conclusions}\label{sec:conclusions}
+%setting and problem
+Scientific imaging plays a major role in many clinical applications and biomedical studies.
+However, image segmentation is a time-consuming process when done manually, and often experts are needed to identify structures correctly~\autocite{Litjens2017}.
+But even when automatic segmentation algorithms are used, at least some manual segmentations are needed, since to date all state-of-the-art algorithms for scientific image segmentation are supervised and rely on annotated training data~\autocite{Litjens2017}.
+The aim of this project thus was to adapt an unsupervised algorithm \gls{stego}~\autocite{Hamilton2022} to be used with high-resolution scientific imaging data and evaluate this method on a scientific imaging data set (depicting degradation of screws in bones).
+
+% solution we found
+It was shown that \gls{stego} can be used with scientific data, and specifically training a model on a data set significantly improved predictions in comparison to an arbitrary (pre-trained) model.
+%lessons learned
+%problems
+However, the resulting predictions can not yet be used in a real-world science context.
+Particularly one label (\formatLabel{degraded screw}) was not detected at all rate, which might hint at the fact that the features received from the backbone might not embed this label well.
+Moreover, because the divergence between cross-validation folds was similar to divergence between training configurations, no clear suggestions regarding training configurations for scientific data could be derived.
+%next steps
+To mitigate these shortcomings, the next steps should include a grid search for better training parameters, and training the backbone (which was adjusted for photographs, not scientific images), to reach a better feature embedding.
+
+%findings and potential
+Given that \gls{stego} is an unsupervised algorithm, results are impressive, as explained earlier.
+Additionally, it must be considered that unsupervised algorithms identify structures in the data, that do not necessarily align with the structures that were represented in the ground truth.
+So aberration from the ground truth has to be expected to some degree.
+And given that \gls{stego} was used for scientific segmentation, which it was not designed for, the results are very encouraging. % with a backbone that was also not designed for scientific images,
+Achieving these promising results highlights the potential of \gls{stego} to be further adapted in the future for unsupervised semantic segmentation of scientific images.
+
+% so footnotes are placed reasonably
+\clearpage 

@@ -1,0 +1,37 @@
+\clearpage
+\section{Introduction}\label{sec:introduction}
+%importance of medical imaging
+%In medicine visualising what is hidden is crucial.
+Scientific imaging plays a major role in many clinical applications and biomedical studies~\autocite{Ganguly2010}.
+The benefits are obvious: today, generating three-dimensional high resolution images of the inside of an object is fast, non-invasive, and relatively simple, as explained later.
+Thus, nearly everything can be imaged using \gls{ct} or \gls{mrt}.
+Imaging is extensively used in medical disciplines such as oncology, neuroscience, cardiology, and many more, to localise tumours, thrombosis or haemorrhage, visualise whole brain areas, or even identify specific cell types in different tissues~\autocite{Ganguly2010}.
+But it is also used in biomedical and material science, where often techniques are utilised that go beyond off-the-shelf medical instruments like \glsfirst{srmct}, which is done extensively at \gls{desy}. %\footnote{At \gls{desy} the Petra III beam lines are operated by HEREON, for example to develop implants that can be absorbed by the body over time~\autocite{Baltruschat2021}}
+
+%problem of medical imaging
+While taking these images can (often) be considered a well-defined routine task, processing them however has proved to be a major challenge.
+The images must be analysed and structures of interest need to be localised and labelled, a process called segmentation.
+Usually, this is done manually, which takes a lot of time, and often domain experts like medical personnel or physicians are needed to identify specific structures~\autocite{Litjens2017}.
+Fortunately, in the last years more and more deep learning techniques became available for medical image segmentation, reducing the time and human effort needed to achieve good segmentation results~\autocite{Antonelli2022}.
+However, most algorithms are supervised and still rely on at least some segmented input data~\autocite[e.g.][]{Antonelli2022}, which means that still a lot of manual labor must be invested.
+Especially for scientific research, this is a major problem since samples wildly differ between experiments, and models can not be reused.
+For example at the microtomography beamline at \gls{desy}, scanned samples range from biological specimen like prehistoric amber or bone implants, to material samples, like surfaces of solar panels.
+Currently, segmentations take days, even though algorithms are used to do it automatically, as these still require manually labelled training data.
+
+%Aim of study
+Only recently an unsupervised algorithm has become available, which does not rely on already labelled data: \glsfirst{stego}~\autocite{Hamilton2022}.
+Using an unsupervised algorithm would save days during the evaluation of experiments at \gls{desy}.
+Given the promising results of \gls{stego} for standard data sets, the aim of this bachelor thesis thus is to investigate \gls{stego}s applicability and transferability to high-resolution scientific data.
+Since the algorithm was developed to segment two-dimensional photographs, some adaptions need to be made, in order to use it with high-resolution, three-dimensional scientific imaging data.
+The main delivery of this study thus will be the adapted \gls{stego} as well as insights about using scientific data sets for training, and how to select hyper- and model-parameters for using \gls{stego} with these kinds of imaging data.
+
+%structure of this paper:
+The paper is structured as follows:
+To understand how deep learning helps in image segmentation, first the scope and issues of image segmentation will be defined, followed by a broad introduction to deep learning and neural networks.
+The main focus will be on transformers, algorithms that use an attention mechanism to derive semantic from an input.
+Especially \gls{stego}~\autocite{Hamilton2022} will be explained, a transformer-based algorithm successfully used to segment 2D photographs unsupervised.
+In the next section the adaption of \gls{stego} to 3D high-resolution scientific imaging data is documented, and experiments to evaluate it in the scientific imaging context are introduced.
+%The experiments are designed to determine the influence of the training data, especially concerning data set diversity.
+%Additionally, it will be investigated if overclustering helps to resolve difficult labels.
+%Qualitative assessment will be done by comparing predictions to the ground truth.
+Results will be presented and discussed, and, finally, the potential of \gls{stego} for unsupervised segmentation of scientific imaging data will be assessed.

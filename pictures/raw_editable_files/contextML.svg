@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="219.28261mm"
+   height="207.31168mm"
+   viewBox="0 0 219.28261 207.31168"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="contextML.svg"
+   inkscape:export-filename="/home/ahrensj/Nextcloud/Jennys/Praxis_Bsc/wiss_Ausarbeitung/pictures/contextML.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <rect
+       x="115.95028"
+       y="171.83809"
+       width="117.86211"
+       height="25.740641"
+       id="rect910" />
+    <rect
+       x="103.47139"
+       y="60.406055"
+       width="95.336342"
+       height="16.902475"
+       id="rect951" />
+    <rect
+       x="216.08023"
+       y="80.497604"
+       width="84.199821"
+       height="41.810364"
+       id="rect931" />
+    <rect
+       x="120.95373"
+       y="132.21368"
+       width="81.21154"
+       height="24.094101"
+       id="rect923" />
+    <rect
+       x="197.45065"
+       y="123.85414"
+       width="110.28483"
+       height="20.754089"
+       id="rect901" />
+    <rect
+       x="125.13793"
+       y="104.14522"
+       width="28.064474"
+       height="11.904668"
+       id="rect895" />
+    <rect
+       x="150.91782"
+       y="79.192619"
+       width="76.439278"
+       height="24.468351"
+       id="rect889" />
+    <rect
+       x="157.47891"
+       y="81.682983"
+       width="25.73748"
+       height="25.827814"
+       id="rect883" />
+    <rect
+       x="131.50034"
+       y="119.25549"
+       width="51.061203"
+       height="18.717318"
+       id="rect866" />
+    <rect
+       x="143.28728"
+       y="34.587246"
+       width="121.54342"
+       height="30.215593"
+       id="rect858" />
+    <rect
+       x="132.21228"
+       y="25.77301"
+       width="131.87573"
+       height="24.644213"
+       id="rect850" />
+    <linearGradient
+       id="linearGradient2789"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2787" />
+    </linearGradient>
+    <rect
+       x="20.043812"
+       y="80.132347"
+       width="69.927994"
+       height="14.100272"
+       id="rect13" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78022708"
+     inkscape:cx="349.86626"
+     inkscape:cy="355.10515"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer5"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="false"
+     showborder="true"
+     borderlayer="false"
+     inkscape:showpageshadow="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1123"
+     inkscape:window-x="1280"
+     inkscape:window-y="275"
+     inkscape:window-maximized="1"
+     showguides="false"
+     fit-margin-left="0.2"
+     fit-margin-top="0.2"
+     fit-margin-right="0.2"
+     fit-margin-bottom="0.2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Algorithms"
+     style="display:inline"
+     transform="translate(-38.858693,-1.9161499)">
+    <ellipse
+       style="opacity:1;fill:#b2182b;fill-opacity:1;stroke:#b2182b;stroke-width:0.75;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path20"
+       cy="105.57199"
+       cx="148.5"
+       inkscape:label="alg_shape"
+       rx="109.06631"
+       ry="103.08084" />
+    <text
+       xml:space="preserve"
+       id="text11"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect13);fill:#b2182b;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       transform="matrix(0.57841041,0,0,0.57840811,118.11354,-40.913484)"
+       inkscape:label="Algorithms"><tspan
+         x="20.042969"
+         y="89.496552"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;fill-opacity:1;stroke-width:1.72888">Algorithms</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.5315px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="116.23877"
+       y="18.67444"
+       id="text957"><tspan
+         sodipodi:role="line"
+         id="tspan955"
+         x="116.23877"
+         y="18.67444"
+         style="font-size:5.5315px;stroke-width:0.264583">automated instructions</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="AI"
+     style="display:inline"
+     transform="translate(-38.858693,-1.9161499)">
+    <ellipse
+       style="fill:#ef8a62;stroke-width:0.750001"
+       id="path846"
+       cx="148.5"
+       cy="114.41264"
+       rx="102.47141"
+       ry="91.879089"
+       inkscape:label="ai_shape" />
+    <text
+       xml:space="preserve"
+       id="text848"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect850);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       transform="matrix(0.57841041,0,0,0.57840811,36.116732,15.234511)"
+       inkscape:label="AI"><tspan
+         x="132.21289"
+         y="35.137177"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:1.72888">Artificial Intelligence</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.5315px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="148.60129"
+       y="43.688049"
+       id="text945"
+       inkscape:label="ai_desc"><tspan
+         sodipodi:role="line"
+         id="tspan943"
+         x="148.60129"
+         y="43.688049"
+         style="font-size:5.5315px;text-align:center;text-anchor:middle;stroke-width:0.264583">solve problems, currently solved</tspan><tspan
+         sodipodi:role="line"
+         x="148.60129"
+         y="50.602425"
+         style="font-size:5.5315px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         id="tspan947"> better by humans</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="ML"
+     style="display:inline"
+     transform="translate(-38.858693,-1.9161499)">
+    <ellipse
+       style="fill:#fddbc7;stroke-width:0.750001"
+       id="path854"
+       cx="148.5"
+       cy="129.04758"
+       rx="95.693474"
+       ry="75.456917"
+       inkscape:label="ml_shape" />
+    <text
+       xml:space="preserve"
+       id="text856"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect858);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       transform="matrix(0.57841041,0,0,0.57840811,34.92412,40.318071)"
+       inkscape:label="ML"><tspan
+         x="143.28711"
+         y="43.95163"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:1.72888">Machine Learning</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text949"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect951);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.02042;"
+       x="2.5863972"
+       y="0"
+       transform="matrix(0.97999212,0,0,0.97998821,0.21822867,11.435596)"
+       inkscape:label="ml_desc"><tspan
+         x="107.78384"
+         y="65.400257"><tspan
+           style="shape-inside:url(#rect951)">ability to learn, without beeing </tspan></tspan><tspan
+         x="122.10165"
+         y="72.455806"><tspan
+           style="shape-inside:url(#rect951)">explicitely prompted</tspan></tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Categories"
+     transform="translate(-38.858693,-1.9161499)"
+     style="display:inline">
+    <ellipse
+       style="opacity:1;fill:#2166ac;fill-opacity:0.5;stroke:#2166ac;stroke-width:0.999992;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path873"
+       cx="101.75365"
+       cy="139.30843"
+       rx="34.322536"
+       ry="48.991184"
+       inkscape:label="unsup_shape" />
+    <ellipse
+       style="opacity:0.446156;fill:#2166ac;fill-opacity:0.5;stroke:#2166ac;stroke-width:0.750001;stroke-opacity:1"
+       id="path875"
+       cx="137.31157"
+       cy="139.93956"
+       rx="35.57782"
+       ry="49.617996"
+       inkscape:label="sup_shape" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.12149px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264582"
+       x="89.392845"
+       y="108.82463"
+       id="text879"
+       inkscape:label="unsupervised"><tspan
+         sodipodi:role="line"
+         id="tspan877"
+         x="89.392845"
+         y="108.82463"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264582">Un-</tspan><tspan
+         sodipodi:role="line"
+         x="89.392845"
+         y="116.47649"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264582"
+         id="tspan915">supervised</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text887"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect889);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       inkscape:label="supervised"
+       transform="matrix(0.57841041,0,0,0.57840811,43.659404,60.90807)"><tspan
+         x="150.91797"
+         y="88.557099"><tspan
+           style="stroke-width:1.72888">Supervised</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.12149px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264582"
+       x="120.02623"
+       y="132.651"
+       id="text907"
+       inkscape:label="semi-supervised"><tspan
+         sodipodi:role="line"
+         x="120.02623"
+         y="132.651"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264582"
+         id="tspan939">Semi-</tspan><tspan
+         sodipodi:role="line"
+         x="120.02623"
+         y="140.30286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle;stroke-width:0.264582"
+         id="tspan913">supervised</tspan></text>
+    <ellipse
+       style="opacity:1;fill:#2166ac;fill-opacity:0.5;stroke:#2166ac;stroke-width:0.999992;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path927"
+       cx="-206.94789"
+       cy="137.66788"
+       rx="28.358257"
+       ry="44.140583"
+       inkscape:label="reinf_shape"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       id="text929"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect931);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       inkscape:label="Reinforcment"
+       transform="matrix(0.57841041,0,0,0.57840811,59.531422,65.828497)"><tspan
+         x="216.08008"
+         y="89.861787"><tspan
+           style="stroke-width:1.72888">Reinforcement</tspan></tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="DL"
+     style="display:inline"
+     transform="translate(-38.858693,-1.9161499)">
+    <ellipse
+       style="fill:#1a661d;fill-opacity:0.5;stroke:#1a661d;stroke-width:0.750001;stroke-opacity:0.984724"
+       id="path862"
+       cx="148.5"
+       cy="168.21034"
+       rx="67.376938"
+       ry="17.015768"
+       inkscape:label="dl_shape" />
+    <text
+       xml:space="preserve"
+       id="text921"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect923);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.72888;"
+       transform="matrix(0.57841041,0,0,0.57840811,57.778133,81.265482)"
+       inkscape:label="Deep Learning"><tspan
+         x="120.95312"
+         y="141.57663"><tspan
+           style="stroke-width:1.72888">Deep Learning
+</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="-12.977717"
+       y="155.57529"
+       id="text906"><tspan
+         sodipodi:role="line"
+         id="tspan904"
+         x="-12.977717"
+         y="155.57529"
+         style="stroke-width:0.264583" /></text>
+    <text
+       xml:space="preserve"
+       id="text908"
+       style="font-weight:bold;font-size:4.93889px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;white-space:pre;shape-inside:url(#rect910)"
+       transform="translate(-24.574201,-4.7219949)"
+       x="43.526379"
+       y="0"
+       inkscape:export-filename="/home/ahrensj/Nextcloud/Jennys/Praxis_Bsc/wiss_Ausarbeitung/pictures/text908.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         x="139.38598"
+         y="176.20765"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">automatic feature extraction
+</tspan></tspan><tspan
+         x="118.82495"
+         y="182.38127"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;text-anchor:middle">always done with multilayer Neural Networks</tspan></tspan></text>
+  </g>
+</svg>
